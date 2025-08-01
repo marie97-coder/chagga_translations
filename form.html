@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changia Tafsiri ya Kichaga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+            display: flex; /* Tumia flexbox kuweka katikati */
+            justify-content: center; /* Weka katikati kiwango cha usawa */
+            align-items: center; /* Weka katikati kiwango cha wima */
+            min-height: 100vh; /* Hakikisha inachukua urefu wote wa viewport */
+            margin: 0; /* Ondoa margin chaguo-msingi */
+        }
+        .container {
+            background-color: white;
+            max-width: 500px;
+            width: 100%; /* Hakikisha inachukua upana wote unaowezekana */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Jumuisha padding na border katika upana/urefu */
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px; /* Ongeza nafasi chini ya kichwa */
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px; /* Nafasi kidogo kati ya label na input */
+            color: #333;
+            font-weight: bold; /* Fanya label ziwe nzito */
+        }
+        textarea { /* Badilisha input[type="text"] kwenda textarea */
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px; /* Nafasi baada ya textarea */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box; /* Muhimu kwa upana wa 100% na padding */
+            resize: vertical; /* Ruhusu mtumiaji kubadilisha urefu */
+            min-height: 80px; /* Urefu wa chini kabisa */
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            /* Mabadiliko muhimu hapa chini */
+            width: auto; /* Ondoa upana wa 100% */
+            display: block; /* Ifanye iwe block element ili iweze kuwekwa katikati */
+            margin-left: auto; /* Weka katikati */
+            margin-right: auto; /* Weka katikati */
+            /* Mabadiliko muhimu hapa juu */
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px; /* Ongeza ukubwa wa fonti */
+            transition: background-color 0.3s ease; /* Athari laini ya hover */
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ingiza Tafsiri Mpya</h2>
+        <form action="submit.php" method="POST">
+            <label for="kichaga">Kichaga:</label>
+            <textarea name="kichaga" id="kichaga" placeholder="andika sentensi ya kichaga hapa" required></textarea>
+
+            <label for="kiswahili">Kiswahili:</label>
+            <textarea name="kiswahili" id="kiswahili" placeholder="andika tafsiri kwa kiswahili hapa" required></textarea>
+
+            <label for="english">English:</label>
+            <textarea name="english" id="english" placeholder="andika tafsiri kwa kiingereza hapa" required></textarea>
+
+            <input type="submit" value="Tuma Tafsiri">
+        </form>
+    </div>
+</body>
+</html>
